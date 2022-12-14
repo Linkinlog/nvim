@@ -11,7 +11,6 @@
 
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_working_path_mode = 'ra'
-let $MYVIMRC="/home/owner/.local/config/nvim/init.vim"
 
 command Wt write | GoTest
 command Wl write | GoLint
