@@ -6,6 +6,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 vim.keymap.set("n", "<A-,>", "<cmd>bp<CR>")
 vim.keymap.set("n", "<A-.>", "<cmd>bn<CR>")
+vim.keymap.set("n", "<A-j>", "<cmd>b#<CR>")
 
 vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")

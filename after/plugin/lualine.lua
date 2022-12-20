@@ -35,9 +35,7 @@ require('lualine').setup {
         lualine_y = {},
         lualine_z = {}
     },
-    tabline = {
-        lualine_a = { 'buffers' },
-    },
+    tabline = {},
     winbar = {},
     inactive_winbar = {},
     extensions = {}
