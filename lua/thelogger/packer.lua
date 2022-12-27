@@ -53,7 +53,6 @@ return require('packer').startup(function(use)
         end
     })
     use { 'folke/zen-mode.nvim' }
-    use { 'glepnir/dashboard-nvim' }
     use { 'nvim-tree/nvim-web-devicons' }
     -- Statusline / Tabline
     use {
