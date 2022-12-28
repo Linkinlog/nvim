@@ -3,6 +3,8 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
+    --- Discord Presence
+    use { 'andweeb/presence.nvim' }
     -- Fuzzy Finder
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
