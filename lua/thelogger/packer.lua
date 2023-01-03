@@ -10,6 +10,7 @@ return require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
+    use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
     -- Syntax Highlighting
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     -- LSP and friends
@@ -63,4 +64,3 @@ return require('packer').startup(function(use)
     }
     use { 'romgrk/barbar.nvim', wants = 'nvim-web-devicons' }
 end)
-
