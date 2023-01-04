@@ -3,7 +3,9 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
-    --- Discord Presence
+    -- Highlight TODO comments
+    use { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }
+    -- Discord Presence
     use { 'andweeb/presence.nvim' }
     -- Fuzzy Finder
     use {
@@ -25,9 +27,9 @@ return require('packer').startup(function(use)
             { 'hrsh7th/nvim-cmp' },
             { 'hrsh7th/cmp-buffer' },
             { 'hrsh7th/cmp-path' },
-            { 'saadparwaiz1/cmp_luasnip' },
             { 'hrsh7th/cmp-nvim-lsp' },
             { 'hrsh7th/cmp-nvim-lua' },
+            { 'saadparwaiz1/cmp_luasnip' },
             -- Laravel
             { 'jwalton512/vim-blade' },
             -- Snippets
