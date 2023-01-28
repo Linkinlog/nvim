@@ -51,10 +51,9 @@ return require('packer').startup(function(use)
     use { 'rmagatti/auto-session' }
     -- Themes / Visual Plugins
     use({
-        'rose-pine/neovim',
-        as = 'rose-pine',
+        'folke/tokyonight.nvim',
         config = function()
-            vim.cmd('colorscheme rose-pine')
+            vim.cmd('colorscheme tokyonight')
         end
     })
     use { 'folke/zen-mode.nvim' }
