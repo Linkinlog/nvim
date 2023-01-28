@@ -37,9 +37,13 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- This is going to get me cancelled
 vim.keymap.set("i", "<C-c>", "<Esc>")
-vim.keymap.set("i", "kj", "<Esc>")
 vim.keymap.set("i", "jk", "<Esc>")
 vim.keymap.set("i", "jj", "<Esc>")
+
+-- Floating terminal remaps
+vim.keymap.set("t", "jk", "<Esc><C-\\><C-n>")
+vim.keymap.set("n", "<C-c>", ":q")
+vim.keymap.set("n", "<leader>t", "<cmd>FloatermToggle<CR>")
 
 
 vim.keymap.set("n", "Q", "<nop>")

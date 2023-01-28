@@ -40,6 +40,8 @@ return require('packer').startup(function(use)
             { 'rafamadriz/friendly-snippets' },
         }
     }
+    -- Floating terminals
+    use { 'voldikss/vim-floaterm' }
     -- Debugger
     use { 'mfussenegger/nvim-dap' }
     use { 'rcarriga/nvim-dap-ui' }
