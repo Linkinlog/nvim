@@ -32,6 +32,9 @@ return require('packer').startup(function(use)
             { 'saadparwaiz1/cmp_luasnip' },
             -- Laravel
             { 'jwalton512/vim-blade' },
+            -- Go
+            { 'ray-x/go.nvim' },
+            { 'ray-x/guihua.lua' }, -- recommended if need floating window support
             -- Snippets
             { 'L3MON4D3/LuaSnip' },
             { 'rafamadriz/friendly-snippets' },

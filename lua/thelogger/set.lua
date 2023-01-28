@@ -20,6 +20,8 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
+vim.opt.conceallevel = 3
+vim.opt.concealcursor = "v"
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
