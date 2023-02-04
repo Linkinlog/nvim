@@ -69,4 +69,17 @@ return require('packer').startup(function(use)
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
     use { 'romgrk/barbar.nvim', wants = 'nvim-web-devicons' }
+    -- VSCode like top bar
+    use({
+        "utilyre/barbecue.nvim",
+        tag = "*",
+        requires = {
+            "SmiteshP/nvim-navic",
+            "nvim-tree/nvim-web-devicons", -- optional dependency
+        },
+        after = "nvim-web-devicons", -- keep this if you're using NvChad
+        config = function()
+            require("barbecue").setup()
+        end,
+    })
 end)
