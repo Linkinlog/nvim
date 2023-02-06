@@ -23,6 +23,7 @@ return require('packer').startup(function(use)
             { 'neovim/nvim-lspconfig' },
             { 'williamboman/mason.nvim' },
             { 'williamboman/mason-lspconfig.nvim' },
+            { 'jose-elias-alvarez/null-ls.nvim' },
             -- Autocompletion
             { 'hrsh7th/nvim-cmp' },
             { 'hrsh7th/cmp-buffer' },
@@ -36,7 +37,13 @@ return require('packer').startup(function(use)
             { 'ray-x/go.nvim' },
             { 'ray-x/guihua.lua' }, -- recommended if need floating window support
             -- Snippets
-            { 'L3MON4D3/LuaSnip' },
+            {
+                "L3MON4D3/LuaSnip",
+                -- follow latest release.
+                tag = "v<CurrentMajor>.*",
+                -- install jsregexp (optional!:).
+                run = "make install_jsregexp"
+            },
             { 'rafamadriz/friendly-snippets' },
         }
     }
@@ -68,7 +75,7 @@ return require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
-    use { 'romgrk/barbar.nvim', wants = 'nvim-web-devicons' }
+    --    use { 'romgrk/barbar.nvim', wants = 'nvim-web-devicons' }
     -- VSCode like top bar
     use({
         "utilyre/barbecue.nvim",
