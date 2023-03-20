@@ -1,5 +1,5 @@
-require("presence"):setup({
-    neovim_image_text   = "VSCode 2", -- Text displayed when hovered over the Neovim image
+require("presence").setup({
+    neovim_image_text   = "VSCode", -- Text displayed when hovered over the Neovim image
     -- Rich Presence text options
     editing_text        = "Addin bugs to %s",               -- Format string rendered when an editable file is loaded in the buffer (either string or function(filename: string): string)
     file_explorer_text  = "Perusin %s",              -- Format string rendered when browsing a file explorer (either string or function(file_explorer_name: string): string)
