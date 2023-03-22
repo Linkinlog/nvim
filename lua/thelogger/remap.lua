@@ -10,6 +10,9 @@ vim.keymap.set("n", "<A-b>", "<cmd>DapToggleBreakpoint<CR>")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
+-- Delete all buffers except the one open
+vim.keymap.set("n", "<A-e>bda", [[%bd|e#]])
+
 -- Change buffers
 vim.keymap.set("n", "<A-,>", "<cmd>bp<CR>")
 vim.keymap.set("n", "<A-.>", "<cmd>bn<CR>")
@@ -33,7 +36,7 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
-vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
+vim.keymap.set({ "n", "v" }, "<leader>d", [["+d]])
 
 -- This is going to get me cancelled
 vim.keymap.set("i", "<C-c>", "<Esc>")
