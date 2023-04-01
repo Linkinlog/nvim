@@ -15,6 +15,7 @@ return require('packer').startup(function(use)
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
     -- Syntax Highlighting
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+    use { 'nvim-treesitter/nvim-treesitter-context' }
     -- LSP and friends
     use {
         'VonHeikemen/lsp-zero.nvim',
