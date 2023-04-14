@@ -5,5 +5,7 @@ null_ls.setup({
         null_ls.builtins.formatting.rustfmt,
         null_ls.builtins.formatting.pint,
         null_ls.builtins.formatting.shellharden,
+        null_ls.builtins.formatting.shfmt,
+        null_ls.builtins.formatting.beautysh,
     }
 })
