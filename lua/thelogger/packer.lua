@@ -14,7 +14,7 @@ return require('packer').startup(function(use)
             { 'nvim-lua/plenary.nvim' },
             { 'nvim-telescope/telescope-live-grep-args.nvim' }
         },
-        config = function ()
+        config = function()
             require("telescope").load_extension("live_grep_args")
         end
     }
@@ -47,7 +47,7 @@ return require('packer').startup(function(use)
             {
                 "L3MON4D3/LuaSnip",
                 -- follow latest release.
-                tag = "v<CurrentMajor>.*",
+                tag = "*",
                 -- install jsregexp (optional!:).
                 run = "make install_jsregexp"
             },
@@ -82,7 +82,6 @@ return require('packer').startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
-    --    use { 'romgrk/barbar.nvim', wants = 'nvim-web-devicons' }
     -- VSCode like top bar
     use({
         "utilyre/barbecue.nvim",
@@ -91,7 +90,7 @@ return require('packer').startup(function(use)
             "SmiteshP/nvim-navic",
             "nvim-tree/nvim-web-devicons", -- optional dependency
         },
-        after = "nvim-web-devicons", -- keep this if you're using NvChad
+        after = "nvim-web-devicons",       -- keep this if you're using NvChad
         config = function()
             require("barbecue").setup()
         end,
