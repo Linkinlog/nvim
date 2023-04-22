@@ -7,6 +7,8 @@ return require('packer').startup(function(use)
     use { "folke/todo-comments.nvim", requires = "nvim-lua/plenary.nvim" }
     -- Discord Presence
     use { 'andweeb/presence.nvim' }
+    -- Activity metrics
+    use { 'wakatime/vim-wakatime' }
     -- Fuzzy Finder
     use {
         'nvim-telescope/telescope.nvim',
