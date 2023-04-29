@@ -27,6 +27,7 @@ vim.opt.conceallevel = 3
 vim.opt.concealcursor = "v"
 
 vim.opt.scrolloff = 8
+vim.opt.signcolumn = "yes"
 vim.opt.statuscolumn = "%l %=%r│%s"
 vim.opt.isfname:append("@-@")
 
