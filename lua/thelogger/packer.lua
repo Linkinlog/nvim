@@ -56,8 +56,13 @@ return require('packer').startup(function(use)
             { 'rafamadriz/friendly-snippets' },
         }
     }
-    -- Floating terminals
-    use { 'voldikss/vim-floaterm' }
+    -- Code coverage shown as sign
+    use({
+        "andythigpen/nvim-coverage",
+        config = function()
+            require("coverage").setup()
+        end,
+    })
     -- Debugger
     use { 'mfussenegger/nvim-dap' }
     use { 'rcarriga/nvim-dap-ui' }
@@ -68,14 +73,26 @@ return require('packer').startup(function(use)
     -- Git / Github
     use { 'tpope/vim-fugitive' }
     use { 'github/copilot.vim' }
+    use {
+        'lewis6991/gitsigns.nvim',
+        config = function()
+            require('gitsigns').setup()
+        end
+    }
+    -- Trouble.nvim
+    use({
+        "folke/trouble.nvim",
+        config = function()
+            require("trouble").setup {
+                icons = false,
+            }
+        end
+    })
     -- Session Management
     use { 'rmagatti/auto-session' }
     -- Themes / Visual Plugins
     use({
         'folke/tokyonight.nvim',
-        config = function()
-            vim.cmd('colorscheme tokyonight')
-        end
     })
     use { 'folke/zen-mode.nvim' }
     use { 'nvim-tree/nvim-web-devicons' }
@@ -90,9 +107,7 @@ return require('packer').startup(function(use)
         tag = "*",
         requires = {
             "SmiteshP/nvim-navic",
-            "nvim-tree/nvim-web-devicons", -- optional dependency
         },
-        after = "nvim-web-devicons",       -- keep this if you're using NvChad
         config = function()
             require("barbecue").setup()
         end,
