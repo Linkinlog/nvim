@@ -56,13 +56,8 @@ return require('packer').startup(function(use)
             { 'rafamadriz/friendly-snippets' },
         }
     }
-    -- Code coverage shown as sign
-    use({
-        "andythigpen/nvim-coverage",
-        config = function()
-            require("coverage").setup()
-        end,
-    })
+    -- Integrated testing
+    use({ "vim-test/vim-test" })
     -- Debugger
     use { 'mfussenegger/nvim-dap' }
     use { 'rcarriga/nvim-dap-ui' }
