@@ -86,9 +86,7 @@ return require('packer').startup(function(use)
     -- Session Management
     use { 'rmagatti/auto-session' }
     -- Themes / Visual Plugins
-    use({
-        'folke/tokyonight.nvim',
-    })
+    use { "catppuccin/nvim", as = "catppuccin" }
     use { 'folke/zen-mode.nvim' }
     use { 'nvim-tree/nvim-web-devicons' }
     -- Statusline / Tabline
