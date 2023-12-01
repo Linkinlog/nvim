@@ -46,13 +46,13 @@ return require('packer').startup(function(use)
             { 'ray-x/go.nvim' },
             { 'ray-x/guihua.lua' }, -- recommended if need floating window support
             -- Snippets
-            {
-                "L3MON4D3/LuaSnip",
-                -- follow latest release.
-                tag = "*",
-                -- install jsregexp (optional!:).
-                run = "make install_jsregexp"
-            },
+                {
+                    "L3MON4D3/LuaSnip",
+                    -- follow latest release.
+                    tag = "*",
+                    -- install jsregexp (optional!:).
+                    run = "make install_jsregexp"
+                },
             { 'rafamadriz/friendly-snippets' },
         }
     }
@@ -83,8 +83,6 @@ return require('packer').startup(function(use)
             }
         end
     })
-    -- Session Management
-    use { 'rmagatti/auto-session' }
     -- Themes / Visual Plugins
     use { "catppuccin/nvim", as = "catppuccin" }
     use { 'folke/zen-mode.nvim' }
