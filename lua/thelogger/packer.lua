@@ -84,7 +84,8 @@ return require('packer').startup(function(use)
         end
     })
     -- Themes / Visual Plugins
-    use { "catppuccin/nvim", as = "catppuccin" }
+    -- use { "catppuccin/nvim", as = "catppuccin" }
+    use { 'dracula/vim', as = 'dracula' }
     use { 'folke/zen-mode.nvim' }
     use { 'nvim-tree/nvim-web-devicons' }
     -- Statusline / Tabline
