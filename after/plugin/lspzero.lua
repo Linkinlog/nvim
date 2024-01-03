@@ -56,12 +56,6 @@ lsp.on_attach(function(_, bufnr)
     vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
-local autocmd = vim.api.nvim_create_autocmd
-autocmd({ "BufRead,BufNewFile" }, {
-    pattern = "*.blade.php",
-    command = "set filetype=blade",
-})
-
 lsp.setup()
 
 vim.diagnostic.config({
