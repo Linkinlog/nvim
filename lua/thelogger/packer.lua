@@ -8,7 +8,7 @@ return require('packer').startup(function(use)
     -- Discord Presence
     use { 'andweeb/presence.nvim' }
     -- Activity metrics
-    use { 'wakatime/vim-wakatime' }
+    use { 'https://gitlab.com/code-stats/code-stats-vim.git', as = 'codestats' }
     -- Fuzzy Finder
     use {
         'nvim-telescope/telescope.nvim',
@@ -46,13 +46,13 @@ return require('packer').startup(function(use)
             { 'ray-x/go.nvim' },
             { 'ray-x/guihua.lua' }, -- recommended if need floating window support
             -- Snippets
-                {
-                    "L3MON4D3/LuaSnip",
-                    -- follow latest release.
-                    tag = "*",
-                    -- install jsregexp (optional!:).
-                    run = "make install_jsregexp"
-                },
+            {
+                "L3MON4D3/LuaSnip",
+                -- follow latest release.
+                tag = "*",
+                -- install jsregexp (optional!:).
+                run = "make install_jsregexp"
+            },
             { 'rafamadriz/friendly-snippets' },
         }
     }
