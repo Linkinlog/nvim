@@ -8,7 +8,6 @@ return require('packer').startup(function(use)
     -- Discord Presence
     use { 'andweeb/presence.nvim' }
     -- Activity metrics
-    use { 'https://gitlab.com/code-stats/code-stats-vim.git', as = 'codestats' }
     -- Fuzzy Finder
     use {
         'nvim-telescope/telescope.nvim',

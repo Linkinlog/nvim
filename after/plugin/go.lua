@@ -18,7 +18,7 @@ require('go').setup({
                    -- false: do nothing
                    -- if lsp_cfg is a table, merge table with with non-default gopls setup in go/lsp.lua, e.g.
                    --   lsp_cfg = {settings={gopls={matcher='CaseInsensitive', ['local'] = 'your_local_module_path', gofumpt = true }}}
-  lsp_gofumpt = false, -- true: set default gofmt in gopls format to gofumpt
+  lsp_gofumpt = true, -- true: set default gofmt in gopls format to gofumpt
   lsp_on_attach = nil, -- nil: use on_attach function defined in go/lsp.lua,
                        --      when lsp_cfg is true
                        -- if lsp_on_attach is a function: use this function as on_attach function for gopls
@@ -97,9 +97,9 @@ require('go').setup({
                               -- can also set to a list of colors to define colors to choose from
                               -- e.g {'#D8DEE9', '#5E81AC', '#88C0D0', '#EBCB8B', '#A3BE8C', '#B48EAD'}
   },
-  trouble = false, -- true: use trouble to open quickfix
+  trouble = true, -- true: use trouble to open quickfix
   test_efm = false, -- errorfomat for quickfix, default mix mode, set to true will be efm only
-  luasnip = false, -- enable included luasnip snippets. you can also disable while add lua/snips folder to luasnip load
+  luasnip = true, -- enable included luasnip snippets. you can also disable while add lua/snips folder to luasnip load
   --  Do not enable this if you already added the path, that will duplicate the entries
   on_jobstart = function(cmd) _=cmd end, -- callback for stdout
   on_stdout = function(err, data) _, _ = err, data end, -- callback when job started
