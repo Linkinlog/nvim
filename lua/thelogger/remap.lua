@@ -56,3 +56,8 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- For going inside of {} on a newline
 vim.keymap.set("n", "<C-j>", "i<CR><Esc>O")
+
+
+-- Go to split window when open
+vim.keymap.set("n", "<C-w>v", "<C-w>v<C-w>l")
+vim.keymap.set("n", "<C-w>s", "<C-w>s<C-w>j")

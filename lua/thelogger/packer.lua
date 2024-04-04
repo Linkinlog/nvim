@@ -57,11 +57,6 @@ return require('packer').startup(function(use)
     }
     -- Integrated testing
     use({ "vim-test/vim-test" })
-    -- Debugger
-    use { 'mfussenegger/nvim-dap' }
-    use { 'rcarriga/nvim-dap-ui' }
-    use { 'theHamsta/nvim-dap-virtual-text' }
-    use { 'nvim-telescope/telescope-dap.nvim' }
     -- Undo Tree
     use { 'mbbill/undotree' }
     -- Git / Github
