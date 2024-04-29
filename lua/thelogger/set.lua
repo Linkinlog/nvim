@@ -36,3 +36,5 @@ vim.opt.updatetime = 50
 vim.opt.clipboard = 'unnamedplus'
 
 vim.opt.colorcolumn = "80"
+
+vim.g.netrw_sort_sequence = '[/]$,<core%(.d+)=,.[a-np-z]$,.h$,.c$,.cpp$,*,_templ.go$,.o$,.obj$,.info$,.swp$,.bak$,~$'
