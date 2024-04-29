@@ -15,7 +15,6 @@ lsp.on_attach(function(_, bufnr)
     vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
     vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
     lsp.default_keymaps({ buffer = bufnr })
-    lsp.buffer_autoformat()
 end)
 
 require('mason').setup({})
@@ -32,6 +31,23 @@ require('mason-lspconfig').setup({
         end,
     }
 })
+
+require("lspconfig").rust_analyzer.setup {
+    settings = {
+        ["rust-analyzer"] = {
+            procMacro = { enable = true, attributes = { enable = true } },
+            check = {
+                command = { "clippy" },
+            },
+            cargo = {
+                allFeatures = true,
+            },
+            checkOnSave = {
+                allTargets = false,
+            }
+        }
+    }
+}
 
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
