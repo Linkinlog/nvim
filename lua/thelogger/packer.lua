@@ -98,4 +98,6 @@ return require('packer').startup(function(use)
             require("barbecue").setup()
         end,
     })
+    -- Earthfile
+    use { 'earthly/earthly.vim' }
 end)
