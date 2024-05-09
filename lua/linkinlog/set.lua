@@ -1,5 +1,3 @@
-vim.opt.guicursor = ""
-
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
@@ -24,17 +22,18 @@ vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
 vim.opt.conceallevel = 3
-vim.opt.concealcursor = "v"
+vim.opt.concealcursor = "nc"
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.statuscolumn = "%l %=%r│%s"
-vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.opt.clipboard = 'unnamedplus'
+vim.opt.clipboard = "unnamedplus"
 
 vim.opt.colorcolumn = "80"
 
-vim.g.netrw_sort_sequence = '[/]$,<core%(.d+)=,.[a-np-z]$,.h$,.c$,.cpp$,*,_templ.go$,.o$,.obj$,.info$,.swp$,.bak$,~$'
+vim.g.netrw_sort_sequence = "[/]$,<core%(.d+)=,.[a-np-z]$,.h$,.c$,.cpp$,*,_templ.go$,.o$,.obj$,.info$,.swp$,.bak$,~$"
+
+vim.lsp.inlay_hint = true
