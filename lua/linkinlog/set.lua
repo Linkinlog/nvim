@@ -37,3 +37,5 @@ vim.opt.colorcolumn = "80"
 vim.g.netrw_sort_sequence = "[/]$,<core%(.d+)=,.[a-np-z]$,.h$,.c$,.cpp$,*,_templ.go$,.o$,.obj$,.info$,.swp$,.bak$,~$"
 
 vim.lsp.inlay_hint = true
+
+vim.loader.enable()
