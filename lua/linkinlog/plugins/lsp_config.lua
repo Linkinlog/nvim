@@ -1,7 +1,7 @@
 return {
 	-- LSP Configuration & Plugins
 	"neovim/nvim-lspconfig",
-    lazy = false,
+    event = "BufReadPre",
 	dependencies = {
 		-- Automatically install LSPs and related tools to stdpath for Neovim
 		{ "williamboman/mason.nvim", config = true }, -- NOTE: Must be loaded before dependants
@@ -33,11 +33,9 @@ return {
 				map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
 				map("K", vim.lsp.buf.hover, "Hover Documentation")
 				map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
-				if client and client.server_capabilities.inlayHintProvider and vim.lsp.inlay_hint then
-					map("<leader>th", function()
-						vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
-					end, "[T]oggle Inlay [H]ints")
-				end
+				map("<leader>th", function()
+					vim.lsp.inlay_hint = true
+				end, "[T]oggle Inlay [H]ints")
 			end,
 		})
 

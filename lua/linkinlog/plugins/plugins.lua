@@ -1,9 +1,10 @@
 return {
-	{ "earthly/earthly.vim" },
-	{ "github/copilot.vim" },
-	{ "numToStr/Comment.nvim", opts = {} },
+	{ "earthly/earthly.vim", ft = "Earthfile"  },
+	{ "github/copilot.vim", event = "BufRead" },
+	{ "numToStr/Comment.nvim", event = "BufRead" },
 	{
 		"lewis6991/gitsigns.nvim",
+        event = "BufReadPre",
 		opts = {
 			signs = {
 				add = { text = "+" },
