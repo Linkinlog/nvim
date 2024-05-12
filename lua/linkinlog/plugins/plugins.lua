@@ -1,7 +1,7 @@
 return {
 	{ "earthly/earthly.vim", ft = "Earthfile"  },
-	{ "github/copilot.vim", event = "BufRead" },
-	{ "numToStr/Comment.nvim", event = "BufRead" },
+	{ "github/copilot.vim", event = "VimEnter" },
+	{ "numToStr/Comment.nvim", event = "VimEnter" },
 	{
 		"lewis6991/gitsigns.nvim",
         event = "BufReadPre",

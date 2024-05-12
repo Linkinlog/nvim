@@ -1,6 +1,6 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
-	event = "BufReadPre",
+	event = "VimEnter",
 	build = ":TSUpdate",
 	opts = {
 		ensure_installed = {
