@@ -1,6 +1,6 @@
 return {
 	"folke/trouble.nvim",
-	event = "VimEnter",
+	event = "BufReadPre",
 	config = function()
 		require("trouble").setup({
 			icons = false,

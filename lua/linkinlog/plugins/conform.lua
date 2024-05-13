@@ -1,6 +1,6 @@
 return {
 	"stevearc/conform.nvim",
-	event = "VimEnter",
+	event = "BufReadPre",
 	keys = {
 		{
 			"<leader>f",
@@ -16,7 +16,7 @@ return {
 		formatters_by_ft = {
 			lua = { "stylua" },
 			javascript = { { "prettierd", "prettier" } },
-			go = { "gofumpt", "golangci-lint" },
+			go = { "gofumpt", "golangci-lint", "goimports" },
 		},
 	},
 }
