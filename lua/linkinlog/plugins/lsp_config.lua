@@ -33,6 +33,9 @@ return {
 				map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
 				map("K", vim.lsp.buf.hover, "Hover Documentation")
 				map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
+				map("<leader>vd", function()
+					vim.diagnostic.open_float()
+				end, "[V]iew [D]iagnostics")
 				map("<leader>th", function()
 					vim.lsp.inlay_hint = true
 				end, "[T]oggle Inlay [H]ints")
