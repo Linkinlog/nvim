@@ -1,6 +1,8 @@
 return {
 	"tpope/vim-fugitive",
-	event = "BufReadPre",
+    keys = {
+        {"<leader>gs"},
+    },
 	config = function()
 		vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 	end,

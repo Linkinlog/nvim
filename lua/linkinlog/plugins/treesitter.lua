@@ -38,6 +38,9 @@ return {
 			},
 			filetype = "blade",
 		}
-		vim.filetype.add({ pattern = { [".*%.blade%.php"] = "blade" } })
+		vim.filetype.add({
+			extension = { templ = "templ" },
+			pattern = { [".*%.blade%.php"] = "blade" },
+		})
 	end,
 }
