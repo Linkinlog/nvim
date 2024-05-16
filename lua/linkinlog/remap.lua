@@ -1,6 +1,3 @@
--- Set leader to space
-vim.g.mapleader = " "
-
 -- Open file explorer
 vim.keymap.set("n", "<leader>e", "<cmd>Ex<CR>")
 
@@ -46,3 +43,79 @@ vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 vim.keymap.set("n", "<leader>rw", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "[R]eplace [W]ord" })
+
+-- See `:help telescope.builtin`
+vim.keymap.set("n", "<leader>sh", ":lua require('telescope.builtin').help_tags()<CR>", { desc = "[S]earch [H]elp" })
+vim.keymap.set("n", "<leader>sk", ":lua require('telescope.builtin').keymaps()<CR>", { desc = "[S]earch [K]eymaps" })
+vim.keymap.set("n", "<leader>sf", ":lua require('telescope.builtin').find_files()<CR>", { desc = "[S]earch [F]iles" })
+vim.keymap.set("n", "<C-p>", ":lua require('telescope.builtin').git_files()<CR>", { desc = "[S]earch [P]roject" })
+vim.keymap.set(
+	"n",
+	"<leader>ss",
+	":lua require('telescope.builtin').builtin()<CR>",
+	{ desc = "[S]earch [S]elect Telescope" }
+)
+vim.keymap.set(
+	"n",
+	"<leader>sw",
+	":lua require('telescope.builtin').grep_string()<CR>",
+	{ desc = "[S]earch current [W]ord" }
+)
+vim.keymap.set("n", "<leader>sg", ":lua require('telescope.builtin').live_grep()<CR>", { desc = "[S]earch by [G]rep" })
+vim.keymap.set(
+	"n",
+	"<leader>sd",
+	":lua require('telescope.builtin').diagnostics()<CR>",
+	{ desc = "[S]earch [D]iagnostics" }
+)
+vim.keymap.set("n", "<leader>sr", ":lua require('telescope.builtin').resume()<CR>", { desc = "[S]earch [R]esume" })
+vim.keymap.set(
+	"n",
+	"<leader>s.",
+	":lua require('telescope.builtin').oldfiles()<CR>",
+	{ desc = '[S]earch Recent Files ("." for repeat)' }
+)
+vim.keymap.set("n", "<leader>b", ":lua require('telescope.builtin').buffers()<CR>", { desc = "[B]uffers" })
+vim.keymap.set("n", "<leader>ps", function()
+	local builtin = require("telescope.builtin")
+	builtin.grep_string({ search = vim.fn.input("Grep > ") })
+end, { desc = "[P]rompt [S]earch" })
+vim.keymap.set(
+	"n",
+	"<leader>ls",
+	":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
+	{ desc = "[L]ive [S]earch" }
+)
+
+vim.keymap.set("n", "<leader>/", function()
+	local builtin = require("telescope.builtin")
+	builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
+		winblend = 10,
+		previewer = false,
+	}))
+end, { desc = "[/] Fuzzily search in current buffer" })
+
+vim.keymap.set("n", "<leader>s/", function()
+	local builtin = require("telescope.builtin")
+	builtin.live_grep({
+		grep_open_files = true,
+		prompt_title = "Live Grep in Open Files",
+	})
+end, { desc = "[S]earch [/] in Open Files" })
+
+-- Shortcut for searching your Neovim configuration files
+vim.keymap.set("n", "<leader>sn", function()
+	local builtin = require("telescope.builtin")
+	builtin.find_files({ cwd = vim.fn.stdpath("config") })
+end, { desc = "[S]earch [N]eovim files" })
+
+-- Trouble
+vim.keymap.set("n", "<leader>tt", function()
+	require("trouble").toggle()
+end)
+
+-- Git
+vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+
+-- Undotree
+vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
