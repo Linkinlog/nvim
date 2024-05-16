@@ -119,3 +119,8 @@ vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 
 -- Undotree
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+
+-- Conform
+vim.keymap.set("n", "<leader>f", function()
+	require("conform").format({ async = true, lsp_fallback = true })
+end, { desc = "[F]ormat buffer" })
