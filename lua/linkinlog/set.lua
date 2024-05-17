@@ -24,7 +24,7 @@ vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
 vim.opt.conceallevel = 3
-vim.opt.concealcursor = "nc"
+vim.opt.concealcursor = ""
 
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
@@ -41,3 +41,5 @@ vim.g.netrw_sort_sequence = "[/]$,<core%(.d+)=,.[a-np-z]$,.h$,.c$,.cpp$,*,_templ
 vim.lsp.inlay_hint = true
 
 vim.loader.enable()
+
+vim.opt.ex = true
