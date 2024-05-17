@@ -85,7 +85,15 @@ return {
 			sources = {
 				{ name = "nvim_lsp" },
 				{ name = "luasnip" },
+				{ name = "buffer" },
 				{ name = "path" },
+			},
+		})
+
+		cmp.setup.filetype({ "sql" }, {
+			sources = {
+				{ name = "buffer" },
+				{ name = "vim-dadbod-completion" },
 			},
 		})
 	end,

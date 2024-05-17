@@ -1,6 +1,6 @@
 return {
 	"andweeb/presence.nvim",
-	event = { "BufReadPre", "BufAdd" },
+	event = "UIEnter",
 	opts = {
 		neovim_image_text = "We Buy Any Car!",
 
