@@ -116,6 +116,11 @@ end)
 
 -- Git
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
+vim.keymap.set("n", "<leader>com", ":Git checkout main<CR>", { desc = "[C]heck[O]ut [M]ain" })
+vim.keymap.set("n", "<leader>coh", ":Git checkout -b hotfix/COPA-", { desc = "[C]heck[O]ut new [H]otfix" })
+vim.keymap.set("n", "<leader>cof", ":Git checkout -b feature/COPA-", { desc = "[C]heck[O]ut new [F]eature" })
+vim.keymap.set("n", "<leader>cob", ":Git checkout -b bugfix/COPA-", { desc = "[C]heck[O]ut new [B]ugfix" })
+vim.keymap.set("n", "<leader>tb", ":Gitsigns toggle_current_line_blame<CR>", { desc = "[T]oggle [B]lame" })
 
 -- Undotree
 vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
