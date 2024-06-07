@@ -8,6 +8,7 @@ return {
 			javascript = { { "prettierd", "prettier" } },
 			html = { { "prettierd", "prettier" } },
 			go = { "gofumpt", "golangci-lint", "goimports" },
+			php = { "pint" },
 		},
 	},
 }

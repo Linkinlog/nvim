@@ -23,6 +23,9 @@ return {
 				local map = function(keys, func, desc)
 					vim.keymap.set("n", keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
 				end
+				local imap = function(keys, func, desc)
+					vim.keymap.set("i", keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
+				end
 				map("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
 				map("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
 				map("gI", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
@@ -39,6 +42,7 @@ return {
 				map("<leader>th", function()
 					vim.lsp.inlay_hint = true
 				end, "[T]oggle Inlay [H]ints")
+				imap("<C-k>", vim.lsp.buf.signature_help, "Signature Help")
 			end,
 		})
 
