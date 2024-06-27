@@ -4,16 +4,24 @@ return {
 	opts = function()
 		local dashboard = require("alpha.themes.dashboard")
 		local logo = [[
-                                             o8o                           .o oooo                       o8o                                                        o8o                        o.   
-                                             `"'                          .8' `888                       `YP                                                        `"'                        `8.  
-ooo. .oo.    .ooooo.   .ooooo.  oooo    ooo oooo  ooo. .oo.  .oo.        .8'   888   .ooooo.   .oooooooo  '   .oooo.o      oooo    ooo  .ooooo.  oooo d8b  .oooo.o oooo   .ooooo.  ooo. .oo.    `8. 
-`888P"Y88b  d88' `88b d88' `88b  `88.  .8'  `888  `888P"Y88bP"Y88b       88    888  d88' `88b 888' `88b      d88(  "8       `88.  .8'  d88' `88b `888""8P d88(  "8 `888  d88' `88b `888P"Y88b    88 
- 888   888  888ooo888 888   888   `88..8'    888   888   888   888       88    888  888   888 888   888      `"Y88b.         `88..8'   888ooo888  888     `"Y88b.   888  888   888  888   888    88 
- 888   888  888    .o 888   888    `888'     888   888   888   888       `8.   888  888   888 `88bod8P'      o.  )88b         `888'    888    .o  888     o.  )88b  888  888   888  888   888   .8' 
-o888o o888o `Y8bod8P' `Y8bod8P'     `8'     o888o o888o o888o o888o       `8. o888o `Y8bod8P' `8oooooo.      8""888P'          `8'     `Y8bod8P' d888b    8""888P' o888o `Y8bod8P' o888o o888o .8'  
-                                                                           `"                 d"     YD                                                                                        "'   
-                                                                                              "Y88888P'                                                                                             
-                                                                                                                                                                                                    
+                                                                        o8o                      
+                                                                        `"'                      
+                           ooo. .oo.    .ooooo.   .ooooo.  oooo    ooo oooo  ooo. .oo.  .oo.     
+                           `888P"Y88b  d88' `88b d88' `88b  `88.  .8'  `888  `888P"Y88bP"Y88b    
+                            888   888  888ooo888 888   888   `88..8'    888   888   888   888    
+                            888   888  888    .o 888   888    `888'     888   888   888   888    
+                           o888o o888o `Y8bod8P' `Y8bod8P'     `8'     o888o o888o o888o o888o   
+                                                                                                 
+                                                                      
+  .o oooo                       o8o                                                        o8o                        o.   
+ .8' `888                       `YP                                                        `"'                        `8.  
+.8'   888   .ooooo.   .oooooooo  '   .oooo.o      oooo    ooo  .ooooo.  oooo d8b  .oooo.o oooo   .ooooo.  ooo. .oo.    `8. 
+88    888  d88' `88b 888' `88b      d88(  "8       `88.  .8'  d88' `88b `888""8P d88(  "8 `888  d88' `88b `888P"Y88b    88 
+88    888  888   888 888   888      `"Y88b.         `88..8'   888ooo888  888     `"Y88b.   888  888   888  888   888    88 
+`8.   888  888   888 `88bod8P'      o.  )88b         `888'    888    .o  888     o.  )88b  888  888   888  888   888   .8' 
+ `8. o888o `Y8bod8P' `8oooooo.      8""888P'          `8'     `Y8bod8P' d888b    8""888P' o888o `Y8bod8P' o888o o888o .8'  
+  `"                 d"     YD                                                                                        "'   
+                     "Y88888P'                                                                                             
       ]]
 
 		dashboard.section.header.val = vim.split(logo, "\n")
