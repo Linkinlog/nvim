@@ -109,11 +109,6 @@ vim.keymap.set("n", "<leader>sn", function()
 	builtin.find_files({ cwd = vim.fn.stdpath("config") })
 end, { desc = "[S]earch [N]eovim files" })
 
--- Trouble
-vim.keymap.set("n", "<leader>tt", function()
-	require("trouble").toggle()
-end)
-
 -- Git
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 vim.keymap.set("n", "<leader>com", ":Git checkout main<CR>", { desc = "[C]heck[O]ut [M]ain" })
