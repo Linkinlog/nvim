@@ -9,6 +9,8 @@ return {
 			html = { { "prettierd", "prettier" } },
 			go = { "gofumpt", "golangci-lint", "goimports" },
 			php = { "pint" },
+			mysql = { "sql_formatter" },
+			sql = { "sql_formatter" },
 		},
 	},
 }
