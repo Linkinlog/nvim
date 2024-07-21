@@ -6,6 +6,7 @@ return {
 		formatters_by_ft = {
 			lua = { "stylua" },
 			javascript = { { "prettierd", "prettier" } },
+			json = { { "prettierd", "prettier" } },
 			html = { { "prettierd", "prettier" } },
 			go = { "gofumpt", "golangci-lint", "goimports" },
 			php = { "pint" },
