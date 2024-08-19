@@ -12,6 +12,7 @@ return {
 			php = { "pint" },
 			mysql = { "sql_formatter" },
 			sql = { "sql_formatter" },
+			yaml = { "prettierd" },
 		},
 	},
 }
