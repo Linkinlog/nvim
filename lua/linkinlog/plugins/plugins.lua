@@ -15,4 +15,5 @@ return {
 			},
 		},
 	},
+	{ "isobit/vim-caddyfile", event = { "BufAdd", "BufReadPre" } },
 }
