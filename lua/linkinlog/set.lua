@@ -6,7 +6,6 @@ vim.opt.relativenumber = true
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -41,3 +40,5 @@ vim.g.netrw_sort_sequence = "[/]$,<core%(.d+)=,.[a-np-z]$,.h$,.c$,.cpp$,*,_templ
 vim.loader.enable()
 
 vim.opt.ex = true
+
+vim.opt.list = true
