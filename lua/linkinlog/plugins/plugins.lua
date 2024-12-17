@@ -16,4 +16,5 @@ return {
 		},
 	},
 	{ "isobit/vim-caddyfile", event = { "BufAdd", "BufReadPre" } },
+	{ "tpope/vim-sleuth", event = { "BufAdd", "BufReadPre" } },
 }
