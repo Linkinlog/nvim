@@ -8,6 +8,7 @@ return {
 			javascript = { { "prettierd", "prettier" } },
 			json = { { "prettierd", "prettier" } },
 			html = { { "prettierd", "prettier" } },
+			svelte = { { "prettierd", "prettier" } },
 			go = { "gofumpt", "golangci-lint", "goimports" },
 			php = { "pint" },
 			mysql = { "sql_formatter" },
