@@ -42,3 +42,6 @@ vim.loader.enable()
 vim.opt.ex = true
 
 vim.opt.list = true
+
+-- Virtual lines
+vim.diagnostic.config({ virtual_lines = true })
