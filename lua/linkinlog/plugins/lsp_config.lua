@@ -56,6 +56,9 @@ return {
 		--  - settings (table): Override the default settings passed when initializing the server.
 		--        For example, to see the options for `lua_ls`, you could go to: https://luals.github.io/wiki/settings/
 		local servers = {
+			clangd = {
+				capabilities = capabilities,
+			},
 			gopls = {},
 			rust_analyzer = {},
 			-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
@@ -72,6 +75,19 @@ return {
 				},
 			},
 		}
+
+		local esp_idf_path = os.getenv("IDF_PATH")
+		local home_path = os.getenv("HOME")
+
+		if esp_idf_path then
+			servers.clangd.cmd = {
+				home_path .. "/.espressif/tools/esp-clang/esp-18.1.2_20240912/esp-clang/bin/clangd",
+				"--background-index",
+				"--query-driver=**",
+			}
+		else
+			servers.clangd.cmd = { "clangd", "--background-index", "--query-driver=**" }
+		end
 
 		require("mason").setup()
 
